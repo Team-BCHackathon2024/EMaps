@@ -1,0 +1,62 @@
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Prevents scrolling */
+        }
+
+        .aspect-ratio-wrapper {
+            width: 100%;
+            max-width: 500px; /* Adjust as needed */
+            position: absolute;
+            padding-top: 56.25%; /* 9:16 aspect ratio */
+        }
+
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            max-width: 100vw; /* Ensures content doesn't exceed viewport width */
+            max-height: 100vh; /* Ensures content doesn't exceed viewport height */
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: relative; /* Ensure the header is positioned relative to its normal position */
+            top: 0; /* Align the header to the top */
+        }
+
+        .container {
+            padding: 1em;
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            padding: 1em;
+            margin: 1em 0;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
