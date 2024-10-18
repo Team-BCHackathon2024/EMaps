@@ -44,7 +44,6 @@ temp/
 *.sublime-project
 *.sublime-workspace
 *.log
-*.sql
 *.sqlite
 
 # Static files
