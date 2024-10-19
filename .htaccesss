@@ -1,0 +1,21 @@
+# Prevent directory listing
+Options -Indexes
+
+# URL Rewriting for Clean URLs (Apache)
+RewriteEngine On
+
+# Exclude certain file types from being rewritten (e.g., CSS, JS, images, fonts)
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|eot|ttf)$ [NC]
+
+# Conditions to avoid rewrites for existing files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other URLs to index.php
+RewriteRule ^(.+)$ index.php?page=$1 [QSA,L]
+
+# Restrict access to certain files and directories
+<FilesMatch "(db\.php|config\.php|\.htaccess)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
