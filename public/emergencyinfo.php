@@ -4,7 +4,6 @@ include '../includes/navbar.php';
 ?>
 
 <main>
-    <h2>Emergency Information & Resources</h2>
     <section class="info-section">
         <article>
             <h3>Preparing for a Natural Disaster</h3>

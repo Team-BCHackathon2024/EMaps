@@ -30,7 +30,7 @@
         <input type="password" name="password" placeholder="Password" required>
         <button type="submit">Register</button>
         <div class="form-footer">
-        <a href="login.php" class="button-link">Already have an account? Login</a>
-        <a href="../../public/index.php" class="button-link">back home</a>
+        <a href="login.php" class="button-link">Login</a>
+        <a href="../../public/index.php" class="button-link">Home</a>
         </div>
     </form>

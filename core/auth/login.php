@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="auth/github.php" class="github-login">Login with GitHub</a>
             <a href="auth/linkedin.php" class="linkedin-login">Login with LinkedIn</a>
         </div>
-        <a href="register.php" class="button-link">Don't have an account? Sign up</a>
-        <a href="../../public/index.php" class="button-link">back home</a>
+        <a href="../../public/index.php" class="button-link">Home</a>
+        <a href="register.php" class="button-link">Sign up</a>
     </form>
 </div>
