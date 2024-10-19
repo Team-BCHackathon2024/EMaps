@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <h1>Welcome to EMaps</h1>
-        <form class="login-form">
+        <form class="login-form" onsubmit="login(event)">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             
@@ -25,6 +25,28 @@
     </div>
 
     <script>
+        async function login(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                alert('Login successful');
+                // Handle successful login (e.g., redirect to another page)
+            } else {
+                alert(result.error);
+            }
+        }
+
         function loginWithGoogle() {
             // Placeholder function for Google login
             alert('Google login functionality goes here.');
