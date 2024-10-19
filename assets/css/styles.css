@@ -1,0 +1,429 @@
+/* Global Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f7fa;
+    color: #333;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure it takes the full viewport height */
+    padding: 20px;
+}
+
+
+/* Navbar Styling */
+nav {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffdd57;
+}
+
+/* Main Content Styling */
+main {
+    padding: 80px 20px; /* Offset for fixed navbar */
+    text-align: center;
+}
+
+/* Landing Section */
+.landing-section {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.landing-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.landing-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.landing-section .button {
+    background-color: #ffdd57;
+    color: #333;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.landing-section .button:hover {
+    background-color: #e6c84c;
+}
+
+/* Button Styling */
+.button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #218838;
+}
+
+/* Dashboard & Card Styling */
+.dashboard-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    max-width: 90%;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #0056b3;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card a.button {
+    display: block;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Alerts & Notification Boxes */
+.alert {
+    background-color: #ffdd57;
+    color: #333;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styling */
+@media (min-width: 768px) {
+    nav ul {
+        gap: 30px;
+    }
+
+    .landing-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .landing-section p {
+        font-size: 1.3rem;
+    }
+
+    .dashboard-content {
+        justify-content: space-around;
+    }
+
+    .card {
+        width: 300px;
+        max-width: 300px;
+    }
+
+    form {
+        max-width: 600px;
+    }
+}
+/* Login Page Styling */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7fa;
+    padding: 20px;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-form h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.login-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.login-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Social Login Buttons */
+.social-login {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-login a {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.google-login {
+    background-color: #db4437; /* Google Red */
+}
+
+.github-login {
+    background-color: #333; /* GitHub Black */
+}
+
+.linkedin-login {
+    background-color: #0077b5; /* LinkedIn Blue */
+}
+
+.social-login a:hover {
+    opacity: 0.9;
+}
+
+/* Container Styling */
+.register-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.register-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Input Fields */
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.register-container input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit Button */
+.register-container button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.register-container button:hover {
+    background-color: #12c781;
+}
+
+/* Link Styling */
+.register-container a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #f2f4f6;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.register-container a:hover {
+    text-decoration: underline;
+}
+
+/* Alert Message */
+.alert {
+    background-color: #ffdd57;
+    color: #333;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button-link {
+    display: inline-block;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+    text-align: center; /* Center text */
+}
+
+.button-link:hover {
+    background-color: #0f6c56; /* Change color on hover */
+    text-decoration: none; /* Ensure no underline on hover */
+}
